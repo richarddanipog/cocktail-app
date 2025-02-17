@@ -65,6 +65,8 @@ const AddCocktailForm: FC = () => {
           strDrinkThumb: reader.result as string,
         }));
       reader.readAsDataURL(file);
+
+      setErrors((prev) => ({ ...prev, strDrinkThumb: '' }));
     }
   };
 
