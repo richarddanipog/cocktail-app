@@ -1,0 +1,19 @@
+.cocktails-list {
+  display: grid;
+  gap: 30px;
+  padding: 20px 0px;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
+@media (max-width: 768px) {
+  .cocktails-list {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+
+/* Media query for mobile */
+@media (max-width: 480px) {
+  .cocktails-list {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+}

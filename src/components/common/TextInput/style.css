@@ -1,0 +1,25 @@
+.input-text {
+  width: 100%;
+  margin: 8px 0px;
+  padding: 12px;
+  font-size: 14px;
+  color: #333;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
+}
+
+.input-text:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.input-text::placeholder {
+  color: #aaa;
+}
+
+.input-text:required:valid {
+  border-color: #28a745;
+}

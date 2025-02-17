@@ -1,0 +1,36 @@
+.item {
+  text-decoration: none;
+}
+
+.cocktail-name {
+  text-align: center;
+  color: #000;
+}
+
+.cocktail-img {
+  border-radius: 5px;
+}
+
+.cocktail-img {
+  width: 100%;
+  height: 250px;
+}
+
+.cocktail-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-decoration: none;
+}
+
+.cocktail-img {
+  width: 100%;
+  height: auto;
+}
+
+.cocktail-name {
+  padding: 5px;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+}

@@ -1,0 +1,139 @@
+.cocktail-form {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.ingredients {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  flex-wrap: nowrap;
+}
+
+.section {
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+select {
+  width: 100%;
+  padding: 12px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+  color: #333;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  margin: 8px 0;
+}
+
+select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+select:invalid {
+  color: #999;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+.btn-remove {
+  background-color: #ff4d4d;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+textarea {
+  width: 100%;
+  min-height: 100px;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  resize: vertical;
+  transition: border-color 0.3s ease-in-out;
+  box-sizing: border-box;
+}
+
+textarea:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+}
+
+.file-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 20px 0px;
+}
+
+.file-section label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.file-section input[type='file'] {
+  border: 1px solid #ccc;
+  padding: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%; /* Make file input take full width */
+}
+
+.preview-img {
+  margin-top: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  object-fit: cover;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .cocktail-form {
+    max-width: 100%;
+  }
+
+  .section {
+    font-size: 14px;
+  }
+
+  select,
+  textarea,
+  input[type='file'] {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .preview-img {
+    width: 80%;
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .cocktail-form {
+    padding: 10px;
+  }
+}
