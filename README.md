@@ -12,8 +12,7 @@ A responsive React application where you can search, view, and add new cocktails
 ## Technologies Used
 
 - **Frontend**: React, TypeScript, Redux Toolkit, React Router
-- **Backend**: Cocktail API (TheCocktailDB) for fetching cocktail data
-- **State Management**: Redux, Redux Persist
+- **State Management**: Redux Toolkit, Redux Persist
 - **Styling**: CSS Grid and Flexbox for layout
 
 ## Getting Started
