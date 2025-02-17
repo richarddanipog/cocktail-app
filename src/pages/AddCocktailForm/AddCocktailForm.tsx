@@ -123,7 +123,6 @@ const AddCocktailForm: FC = () => {
 
     toast.success('New cocktail was added successfully.');
 
-    // addItem(newCocktail as TCocktail);
     dispatch(cocktailsActions.addCocktail(newCocktail));
     setFormData({
       strDrink: '',
