@@ -1,6 +1,6 @@
 import './style.css';
 
-import { FC, useMemo } from 'react';
+import { FC, useEffect, useMemo } from 'react';
 import { validate } from 'uuid';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useCocktailDetailAPI } from '../../hooks/useCocktails';
@@ -29,6 +29,15 @@ const CocktailDetail: FC = () => {
 
     return cocktail as TCocktail;
   }, [cocktail, id, cocktailList]);
+
+  useEffect(() => {
+    const cocktailNotFound =
+      currentCocktail && !Object.keys(currentCocktail).length;
+
+    if (cocktailNotFound) {
+      navigate('/');
+    }
+  }, [currentCocktail, navigate]);
 
   const ingredients = useMemo(() => {
     if (currentCocktail && 'ingredients' in currentCocktail) {
