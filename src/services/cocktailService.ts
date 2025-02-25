@@ -2,10 +2,22 @@ import { TCocktail } from '../types/cocktail';
 import api from './api';
 
 export const getCocktails = async (search: string) => {
-  const searchTerm = search || 'a'; // 'a' for fetch default results
-
   try {
+    const searchTerm = search || 'a'; // 'a' for fetch default results
     const { data } = await api.get(`/search.php?s=${searchTerm}`);
+    const persistedState = JSON.parse(
+      localStorage.getItem('persist:cocktails') || '{}'
+    );
+
+    if (persistedState.cocktailsList && data.drinks) {
+      const cocktails = JSON.parse(persistedState.cocktailsList);
+
+      const filteredCocktailsList = cocktails.filter((cocktail: TCocktail) =>
+        cocktail.strDrink.toLowerCase().includes(search.toLowerCase())
+      );
+
+      return [...data.drinks, ...filteredCocktailsList];
+    }
 
     return data.drinks || [];
   } catch (error) {
